@@ -4,15 +4,11 @@ import { useAuth } from '../context/AuthContext';
 import { authApi } from '../services/api';
 import Logo from '../components/common/Logo';
 import ThemeToggle from '../components/common/ThemeToggle';
-import DemoGuideModal from '../components/common/DemoGuideModal';
 import {
   Lock,
   Mail,
   ArrowRight,
-  Sparkles,
-  BookOpen,
   AlertCircle,
-  CheckCircle,
   Info
 } from 'lucide-react';
 
@@ -30,7 +26,6 @@ export default function Login() {
   const [sessionExpiredNotice, setSessionExpiredNotice] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [demoAccounts, setDemoAccounts] = useState(DEFAULT_DEMO_ACCOUNTS);
-  const [guideOpen, setGuideOpen] = useState(false);
 
   const { login, isAuthenticated, user, getRoleDashboardPath } = useAuth();
   const navigate = useNavigate();
@@ -150,25 +145,8 @@ export default function Login() {
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-300/30 dark:bg-indigo-600/10 rounded-full blur-3xl"></div>
       </div>
 
-      {/* Top Bar with Demo Guide & Theme Toggle */}
-      <div className="relative z-10 max-w-5xl mx-auto w-full flex items-center justify-between mb-4">
-        <div className="flex items-center gap-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100/90 dark:bg-blue-950/70 border border-blue-200 dark:border-blue-800 text-blue-800 dark:text-blue-300 text-xs font-semibold shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-            <span className="hidden sm:inline">Campus Tech Fest 2026 Showcase</span>
-            <span className="sm:hidden">Tech Fest 2026</span>
-          </div>
-
-          <button
-            type="button"
-            onClick={() => setGuideOpen(true)}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800/80 text-amber-800 dark:text-amber-300 text-xs font-bold shadow-xs hover:bg-amber-100 dark:hover:bg-amber-900/40 transition"
-          >
-            <BookOpen className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
-            <span>Demo Guide</span>
-          </button>
-        </div>
-
+      {/* Top Bar with Theme Toggle */}
+      <div className="relative z-10 max-w-5xl mx-auto w-full flex items-center justify-end mb-4">
         <ThemeToggle size="sm" />
       </div>
 
@@ -185,46 +163,23 @@ export default function Login() {
         <div className="grid grid-cols-1 lg:grid-cols-12 bg-white dark:bg-slate-900 rounded-3xl shadow-2xl shadow-slate-200/50 dark:shadow-slate-950/60 border border-slate-200/80 dark:border-slate-800 overflow-hidden">
           
           {/* Left Column: Brand Hero & Tagline */}
-          <div className="lg:col-span-5 bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-900 p-6 sm:p-10 text-white flex flex-col justify-between relative overflow-hidden">
+          <div className="lg:col-span-5 bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-900 p-8 sm:p-12 text-white flex flex-col justify-center relative overflow-hidden">
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
-            <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-6">
+            <div className="relative z-10 space-y-6">
+              <div className="flex items-center gap-3.5">
                 <Logo size="lg" showText={false} />
                 <div>
-                  <h1 className="text-2xl font-extrabold tracking-tight">Edusphere</h1>
+                  <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Edusphere</h1>
                   <p className="text-blue-200 text-xs font-medium">Campus Governance Platform</p>
                 </div>
               </div>
 
-              <div className="space-y-4 my-6 sm:my-8">
+              <div className="pt-2">
                 <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug">
                   Smart College Management with Transparent Grievance Redressal
                 </h2>
-                <p className="text-blue-100 text-xs leading-relaxed opacity-90">
-                  A high-performance institutional portal supporting autonomous attendance, curriculum gradebooks, notices, and verifiable 3-day SLA grievance tracking.
-                </p>
-
-                <div className="space-y-2.5 pt-2">
-                  <div className="flex items-start gap-2.5 text-xs text-blue-100">
-                    <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
-                    <span>Real-time Attendance, Marks & Curriculum tracking</span>
-                  </div>
-                  <div className="flex items-start gap-2.5 text-xs text-blue-100">
-                    <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
-                    <span>Anonymous student grievances with automated category routing</span>
-                  </div>
-                  <div className="flex items-start gap-2.5 text-xs text-blue-100">
-                    <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
-                    <span>Central Admin 3-day SLA escalation engine with full audit trail</span>
-                  </div>
-                </div>
               </div>
-            </div>
-
-            <div className="relative z-10 pt-5 border-t border-white/10 text-[11px] text-blue-200 flex justify-between items-center">
-              <span>SQLite + Express + React</span>
-              <span className="font-semibold text-white">Autumn 2026</span>
             </div>
           </div>
 
@@ -353,20 +308,10 @@ export default function Login() {
 
       {/* Login Footer */}
       <footer className="relative z-10 text-center py-3 text-xs text-slate-500 dark:text-slate-400">
-        <p className="font-semibold text-slate-700 dark:text-slate-300">
-          Built for {import.meta.env.VITE_COLLEGE_NAME || 'Edusphere Institute of Technology'} Tech Fest 2026
-        </p>
-        <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">
+        <p className="text-[11px] text-slate-400 dark:text-slate-500">
           Edusphere • Modern College Management & Transparent Grievance Redressal Platform
         </p>
       </footer>
-
-      {/* Demo Guide Modal */}
-      <DemoGuideModal
-        isOpen={guideOpen}
-        onClose={() => setGuideOpen(false)}
-        onSelectDemo={handleSelectDemoAccount}
-      />
     </div>
   );
 }

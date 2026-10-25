@@ -81,7 +81,7 @@ export default class ErrorBoundary extends React.Component {
             </div>
 
             <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-5">
-              Edusphere Campus Governance Platform • Tech Fest 2026
+              Edusphere Campus Governance Platform
             </p>
           </div>
         </div>

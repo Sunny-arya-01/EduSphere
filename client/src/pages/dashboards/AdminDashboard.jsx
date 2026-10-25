@@ -136,7 +136,7 @@ export default function AdminDashboard() {
             <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-white/20 text-white backdrop-blur-md uppercase tracking-wider">
               Central Administration
             </span>
-            <span className="text-blue-200 text-xs">• Institute Operational Status: Optimal</span>
+            <span className="text-blue-200 text-xs">• Operational Status: Optimal</span>
           </div>
           <h2 className="text-2xl font-extrabold tracking-tight">
             Welcome to Edusphere Institution Control
@@ -151,7 +151,7 @@ export default function AdminDashboard() {
           <button
             onClick={() => setShowResetModal(true)}
             className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-xs font-semibold text-white backdrop-blur-md transition shadow-xs"
-            title="Re-seed SQLite database with fresh demo data"
+            title="Re-seed database with fresh demo data"
           >
             <RotateCcw className="w-3.5 h-3.5" />
             <span>Reset Demo Data</span>
@@ -506,7 +506,7 @@ export default function AdminDashboard() {
             <div className="space-y-3">
               {(data?.notices || [
                 {
-                  title: 'Annual Tech Fest "Innovasia 2026" Registrations Open',
+                  title: 'Annual College Symposium "Innovasia 2026" Registrations Open',
                   content: 'All student tracks and project displays are now live for registrations.',
                   created_at: '2026-10-17'
                 },

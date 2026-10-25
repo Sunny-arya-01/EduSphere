@@ -32,11 +32,8 @@ export default function PrintTimetable({
       {/* Print Header */}
       <div className="mb-2 text-center border-b-2 border-black pb-1.5">
         <h1 className="text-lg font-black uppercase tracking-wider text-black leading-tight">
-          Edusphere Institute of Technology
+          Edusphere - Department Timetable
         </h1>
-        <h2 className="text-sm font-bold text-black mt-0.5 leading-tight">
-          {title} — Weekly Academic Schedule (08:00 – 18:00)
-        </h2>
         <p className="text-[10pt] text-black mt-0.5 font-medium leading-tight">
           {departmentName ? `${departmentName} | ` : ''}Printed on: {printDate}
         </p>

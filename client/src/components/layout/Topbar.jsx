@@ -35,16 +35,10 @@ export default function Topbar({ onOpenSidebar, title }) {
       </div>
 
       <div className="flex items-center gap-2 sm:gap-3">
-        {/* Academic Session Pill */}
-        <div className="hidden md:flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 text-xs font-medium border border-slate-200/60 dark:border-slate-700/60">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Semester Autumn 2026</span>
-        </div>
-
         {/* Theme Toggle (Light / Dark Mode) */}
         <ThemeToggle size="sm" />
 
-        {/* Tech Fest Switch Account Quick Button */}
+        {/* Switch Account Quick Button */}
         <button
           onClick={handleSwitchAccount}
           title="Switch Demo Role"

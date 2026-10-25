@@ -15,7 +15,6 @@ import {
   LogOut,
   Calendar,
   Layers,
-  Sparkles,
   AlertCircle,
   PlusCircle,
   MessageSquare,
@@ -177,20 +176,6 @@ export default function Sidebar({ isOpen, onClose }) {
               </NavLink>
             );
           })}
-
-          <div className="pt-4 px-3 pb-2 text-[10px] font-bold tracking-wider text-slate-400 dark:text-slate-500 uppercase">
-            Platform Status
-          </div>
-
-          <div className="mx-2 p-3 rounded-xl bg-blue-50/70 dark:bg-slate-800/70 border border-blue-100 dark:border-slate-700/80 text-xs text-blue-900 dark:text-blue-200">
-            <div className="flex items-center gap-1.5 font-bold text-blue-800 dark:text-blue-300 mb-1">
-              <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-              <span>Campus Tech Fest 2026</span>
-            </div>
-            <p className="text-[11px] text-blue-700/90 dark:text-slate-300 leading-relaxed font-medium">
-              Neutral institutional governance, attendance & transparent grievance redressal.
-            </p>
-          </div>
         </div>
 
         {/* Footer Logout */}

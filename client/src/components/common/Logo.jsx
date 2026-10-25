@@ -88,9 +88,6 @@ export default function Logo({ size = 'md', showText = true, className = '' }) {
             <span className={`font-extrabold tracking-tight text-slate-900 dark:text-white ${textSizes[size] || textSizes.md}`}>
               Edusphere
             </span>
-            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200/80 dark:border-blue-700/80 uppercase">
-              Pro
-            </span>
           </div>
           <p className="text-[11px] font-medium text-slate-500 dark:text-slate-400 -mt-0.5">
             College Management

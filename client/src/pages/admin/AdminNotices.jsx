@@ -238,7 +238,7 @@ export default function AdminNotices() {
                 </label>
                 <input
                   type="text"
-                  placeholder="e.g. Annual Tech Fest Innovasia Registrations Open"
+                  placeholder="e.g. Annual College Symposium Registrations Open"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                   className="w-full px-3 py-2 text-xs font-medium rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:bg-white dark:focus:bg-slate-800 focus:outline-hidden focus:border-blue-600 text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500"

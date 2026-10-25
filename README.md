@@ -1,6 +1,6 @@
 # 🏛️ Edusphere - Modern College Management System
 
-> **College Tech Fest 2026 Interactive Demo**  
+> **College Management Platform**  
 > An institutional management platform featuring Role-Based Access Control (RBAC), autonomous curriculum tracking, real-time attendance, and integrated Complaint Management schema.
 
 ---
@@ -75,7 +75,7 @@ Edusphere's live attendance system allows students to scan a dynamic QR code dir
 
 ## 🔑 Demo Login Accounts
 
-During the tech fest demo, you can either click the **"Quick Demo Accounts"** one-click buttons on the login screen or enter the credentials below:
+You can either click the **"Quick Demo Accounts"** one-click buttons on the login screen or enter the credentials below:
 
 | Persona | Role | Department | Email | Password | Access Highlights |
 | :--- | :--- | :--- | :--- | :--- | :--- |
